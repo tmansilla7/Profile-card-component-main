@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --bodyFont: 'Kumbh Sans', sans-serif;
+    --blueText: hsl(229, 23%, 23%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 10%);
+    --bodyColor: hsl(0, 0%, 59%);
+    --borderRadius: 1rem;
+    --bodySize: 1.8rem;
+    --cardWidth: 25rem;
+    --pd2: 2rem;
+    --mg1: 1rem;
+}
+@media (min-width: 768px) { 
+    :root{
+        --cardWidth: 30rem;
+    }
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background: url(../img/bg-pattern-top.svg) -40% -40% /30rem no-repeat, 
+                url(../img/bg-pattern-bottom.svg) 115% 140%/30rem no-repeat, 
+                hsl(185, 75%, 40%);
+    font-family: var(--bodyFont);
+    font-size: var(--bodySize);
+    color: var(--bodyColor);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+@media (min-width: 768px) { 
+    body{
+        background: url(../img/bg-pattern-top.svg) -30% -450% /65rem no-repeat, 
+                url(../img/bg-pattern-bottom.svg) 120% 775%/65rem no-repeat, 
+                hsl(185, 75%, 40%);
+    }
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.card{
+    background-color: var(--whiteColor);
+    border-radius: var(--borderRadius);
+    width: var(--cardWidth);
+    text-align: center;
+}
+.card__bg{
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+}
+.card__title{
+    color: var(--blackColor);
+}
+.card__avatar{
+    border: .5rem solid var(--whiteColor);
+    margin: -5rem auto 0 auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+.card__span{
+    font-weight: 400;
+    padding-left: calc(var(--pd2) / 2);
+}
+.card__city{
+    margin-bottom: var(--mg1);
+}
+.card__numbers{     
+    border-top: .1rem solid #f6f6f6;
+    padding: var(--pd2);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card__data{
+    color: var(--blackColor);
+    font-weight: 700;
+}
+.card__text{
+    margin-top: var(--mg1);
+    font-size: 1.4rem;
+}
+.atributtion{    
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+}
+.atributtion__names, .atributtion__name{
+    font-weight: 700;
+}
+.atributtion__name{
+    color: var(--whiteColor);
+}
+.atributtion__names{
+    color: var(--blueText);
+}
